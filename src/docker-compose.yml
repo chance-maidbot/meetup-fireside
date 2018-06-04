@@ -10,28 +10,24 @@ services:
     ports:
       - '3200:3200'
     environment:
-      - SCYLLA_HOST=scylla
-      - SCYLLA_PORT=9042
-      - SCYLLA_KEYSPACE=pancakes
+      - CASSANDRA_HOST=cassandra
+      - CASSANDRA_PORT=9042
+      - CASSANDRA_KEYSPACE=pancakes
     depends_on:
-      - scylla
+      - cassandra
     volumes:
       - ./app:/api/app
     networks:
-      - maidbot
+      - fireside
 
-  scylla:
-    container_name: firesidescylla
-    image: firesidescylla:latest
-    command: --experimental 1
-    build:
-      context: .
-      dockerfile: Scylla.Dockerfile
+  cassandra:
+    container_name: firesidecass
+    image: 'bitnami/cassandra:latest'
     ports: ["9042:9042", "7199:7199"]
     networks:
-      - maidbot
+      - fireside
 
 
 networks:
-  maidbot:
+  fireside:
     driver: bridge

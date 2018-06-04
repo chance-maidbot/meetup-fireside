@@ -8,7 +8,10 @@
     "dev": "nodemon ./build/server.js",
     "flow": "flow",
     "build": "babel app/ -d build/ --copy-files",
-    "flow:watch": "flow-watch"
+    "flow:watch": "flow-watch",
+    "docker:dev:build": "docker-compose -f docker-compose.yml build",
+    "docker:dev:up": "docker-compose -f docker-compose.yml up",
+    "docker:dev:down": "docker-compose -f docker-compose.yml down"
   },
   "repository": {
     "type": "git",
