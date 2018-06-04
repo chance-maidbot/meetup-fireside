@@ -1,0 +1,81 @@
+{
+  "name": "fireside-api",
+  "version": "1.0.0",
+  "description": "example app for demonstrating cassandra/graphql",
+  "main": "app/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./build/server.js",
+    "flow": "flow",
+    "build": "babel app/ -d build/ --copy-files",
+    "flow:watch": "flow-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chance-maidbot/meetup-fireside.git"
+  },
+  "keywords": [
+    "graphql"
+  ],
+  "author": "chance eakin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chance-maidbot/meetup-fireside/issues"
+  },
+  "dependencies": {
+    "apollo-server-express": "1.3.3",
+    "app-module-path": "2.2.0",
+    "body-parser": "1.18.2",
+    "cassandra-driver": "3.4.1",
+    "compression": "1.7.2",
+    "cookie-parser": "1.4.3",
+    "dotenv": "4.0.0",
+    "express": "4.16.3",
+    "graphql": "0.11.7",
+    "graphql-iso-date": "^3.5.0",
+    "graphql-tag": "2.6.1",
+    "graphql-tools": "2.18.0",
+    "isomorphic-fetch": "2.2.1",
+    "lodash.debounce": "4.0.8",
+    "lodash.throttle": "4.1.1",
+    "moment": "2.21.0",
+    "node-cache": "4.1.1",
+    "node-uuid": "^1.4.8"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.0.0-beta.42",
+    "@babel/core": "7.0.0-beta.42",
+    "@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.42",
+    "@babel/plugin-transform-runtime": "7.0.0-beta.42",
+    "@babel/polyfill": "7.0.0-beta.42",
+    "@babel/preset-env": "7.0.0-beta.42",
+    "@babel/preset-flow": "7.0.0-beta.42",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "8.2.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "eslint": "4.15.0",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-config-standard": "11.0.0-beta.0",
+    "eslint-plugin-babel": "4.1.2",
+    "eslint-plugin-flow": "2.29.1",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-node": "5.2.1",
+    "eslint-plugin-prettier": "2.6.0",
+    "eslint-plugin-promise": "3.6.0",
+    "eslint-plugin-standard": "3.0.1",
+    "flow-bin": "0.66.0",
+    "flow-typed": "2.4.0",
+    "flow-watch": "1.1.2",
+    "nodemon": "^1.17.0",
+    "prettier": "1.11.1"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "build/*"
+    ],
+    "execMap": {
+      "js": "babel app/ -d build/ && node"
+    }
+  },
+  "homepage": "https://github.com/chance-maidbot/meetup-fireside#readme"
+}

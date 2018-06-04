@@ -1,0 +1,22 @@
+{
+  "presets": [
+      "@babel/preset-env",
+      "@babel/preset-flow"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        ["@babel/plugin-transform-runtime", {
+          "helpers": false,
+          "polyfill": false,
+          "regenerator": true,
+          "moduleName": "babel-runtime"
+        }]
+      ]
+    }
+  },
+  "plugins": [
+    "transform-class-properties",
+    ["@babel/plugin-proposal-object-rest-spread", { "useBuiltIns": true }]
+  ]
+}

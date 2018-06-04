@@ -1,0 +1,7 @@
+node_modules/
+build/
+logs/
+.env
+app/graphql/.DS_Store
+console-stderr.log
+console-stdout.log
