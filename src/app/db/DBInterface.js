@@ -24,9 +24,16 @@ export default class DBInterface {
       return `${host}:${this.port || 'CASSANDRA_PORT NOT SET'}`;
     });
 
+    // Look, this is a demo. I'm lazy. Don't do this in prod. Use your env variables like good little devs.
+    this.authProvider = new cassandra.auth.PlainTextAuthProvider(
+      'cassandra',
+      'cassandra'
+    );
+
     this.client = new cassandra.Client({
       contactPoints,
-      keyspace: this.keyspace
+      keyspace: this.keyspace,
+      authProvider: this.authProvider
     });
   }
 

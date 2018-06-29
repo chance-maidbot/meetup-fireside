@@ -8,7 +8,7 @@ services:
       context: .
       dockerfile: Server.Dev.Dockerfile
     ports:
-      - '3200:3200'
+      - '3000:3000'
     environment:
       - CASSANDRA_HOST=cassandra
       - CASSANDRA_PORT=9042

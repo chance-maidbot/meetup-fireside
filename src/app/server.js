@@ -12,9 +12,9 @@ const GRAPHQL_PORT = 3000;
 const graphQLServer = express();
 
 export const db: DBInterface = new DBInterface({
-  host: process.env.SCYLLA_HOST || '127.0.0.1',
+  host: process.env.CASSANDRA_HOST || '127.0.0.1',
   port: process.env.SCYLLA_PORT || '9042',
-  keyspace: process.env.SCYLLA_KEYSPACE || ''
+  keyspace: process.env.CASSANDRA_KEYSPACE || ''
 }).client;
 
 graphQLServer.use(compression());

@@ -35,7 +35,7 @@
     "dotenv": "4.0.0",
     "express": "4.16.3",
     "graphql": "0.11.7",
-    "graphql-iso-date": "^3.5.0",
+    "graphql-iso-date": "3.5.0",
     "graphql-tag": "2.6.1",
     "graphql-tools": "2.18.0",
     "isomorphic-fetch": "2.2.1",
