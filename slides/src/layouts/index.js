@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import Swipeable from 'react-swipeable';
 
 import './index.css';
+import "prismjs/themes/prism-okaidia.css";
 
 const Header = ({ name, title, date }) => (
   <header>
