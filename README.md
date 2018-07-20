@@ -14,12 +14,14 @@ cd slides/
 npm i && gatsby develop
 ```
 
+## To Run app:
+
 ### Have the following on your host machine:
 
 docker
 cassandra and cqlsh
 
-### To Run app:
+### Run it dowwwwwn
 
 ```sh
 cd src/
